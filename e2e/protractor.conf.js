@@ -1,3 +1,5 @@
+process.env.CHROME_BIN = require('puppeteer').executablePath();
+
 // @ts-check
 // Protractor configuration file, see link for more information
 // https://github.com/angular/protractor/blob/master/lib/config.ts
@@ -13,7 +15,11 @@ exports.config = {
     './src/**/*.e2e-spec.ts'
   ],
   capabilities: {
-    'browserName': 'chrome'
+    'browserName': 'chrome',
+    chromeOptions: {
+      binary: process.env.CHROME_BIN,
+      args: [ "--headless", "--disable-gpu", "--window-size=1024,768",'--no-sandbox', '--disable-extensions', '--disable-dev-shm-usage' ]
+    }
   },
   directConnect: true,
   baseUrl: 'http://localhost:4200/',
