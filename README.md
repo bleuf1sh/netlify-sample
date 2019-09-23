@@ -1,4 +1,6 @@
-# NetlifySample
+# Netlify Sample
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8c4a578e-7b87-43d1-af46-2ccad0602343/deploy-status)](https://app.netlify.com/sites/netsample/deploys)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.5.
 
