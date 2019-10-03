@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -22,15 +22,15 @@ export class AppComponent implements OnInit {
   title = 'Git Sample on Netlify';
 
   csvData = '';
-  
+
   ngOnInit() {
      // Loading the jQuery code
-    fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vTEGksE78DKhE9n4_tM-1lt_-BaY9g1fOLyKuCBoNdRdKp1YpzeqVkP_I62aeMgr0Nagd790OVlkHmF/pub?gid=1070476763&single=true&output=csv")
-        .then(function (response) {
-            response.text().then(function (responseText) {
+    fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vTEGksE78DKhE9n4_tM-1lt_-BaY9g1fOLyKuCBoNdRdKp1YpzeqVkP_I62aeMgr0Nagd790OVlkHmF/pub?gid=1070476763&single=true&output=csv')
+        .then((response) => {
+            response.text().then((responseText) => {
                 this.csvData = responseText;
                 console.log(responseText);
-                alert("Done using Fetch!");
+                alert('Done using Fetch!');
             });
         });
   }

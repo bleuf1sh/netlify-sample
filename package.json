@@ -9,7 +9,7 @@
     "testWatch": "ng test --watch",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "netlify": "ng test && ng e2e && ng build --prod"
+    "netlify": "ng lint && ng test && ng e2e && ng build --prod"
   },
   "private": true,
   "dependencies": {
