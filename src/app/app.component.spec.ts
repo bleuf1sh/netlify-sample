@@ -32,5 +32,4 @@ describe('AppComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('.content span').textContent).toContain('Git Sample on Netlify app is running!');
   });
-  
 });
